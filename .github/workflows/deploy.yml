@@ -28,26 +28,26 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Use NPM 7
-        run: npm i -g npm@latest
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
 
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
-          path: ~/.npm
-          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.OS }}-node-
-            ${{ runner.OS }}-
+            ${{ runner.os }}-yarn-
 
       - name: Build
         run: |
-          npm ci --legacy-peer-deps
-          npm run build
-          npm run export
+          yarn install --frozen-lockfile
+          yarn build
+          yarn export
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
