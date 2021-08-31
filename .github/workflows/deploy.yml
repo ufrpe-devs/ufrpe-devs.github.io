@@ -17,6 +17,10 @@ jobs:
     runs-on: ubuntu-20.04
 
     strategy:
+      # TODO: Habilitar fail-fast para garantir um deploy bem sucedido!
+      # Desabilita fail-fast
+      fail-fast: false
+      
       matrix:
         node-version: [14.x]
 
