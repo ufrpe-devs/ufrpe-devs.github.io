@@ -55,3 +55,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
+          user_name: 'ufrpedevs'
+          user_email: 'ufrpedevs@gmail.com'
