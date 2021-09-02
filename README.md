@@ -1,6 +1,7 @@
 # ufrpe-devs.github.io
 
 [![UFRPE Devs badge](https://raw.githubusercontent.com/ufrpe-devs/comunidade/main/media/ufrpe-devs-badge.svg)](https://github.com/ufrpe-devs/comunidade)
+[![Deploy to GitHub Pages](https://github.com/ufrpe-devs/ufrpe-devs.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/ufrpe-devs/ufrpe-devs.github.io/actions/workflows/deploy.yml)
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
