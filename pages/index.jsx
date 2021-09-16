@@ -1,8 +1,10 @@
-import Head from 'next/head'
-import Navbar from '../components/Navbar'
+import Page from "../components/Page"
+import { Hero } from "../components/Home"
 
 export default function Home() {
   return (
-    <Navbar />
+    <Page>
+      <Hero/>
+    </Page>
   )
 }

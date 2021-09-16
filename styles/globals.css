@@ -1,9 +1,22 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  padding: 4vh 3vw;
+}
+
+body > div:first-child {
+  width: 100%;
+}
+
+#main-logo-rectangle {
+  cursor: pointer;
+  transition: 0.5s all;
+}
+
+#main-logo-rectangle:hover {
+  opacity: 0.9;
 }
 
 a {

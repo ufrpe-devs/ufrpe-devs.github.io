@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { LogoRectangle } from "../../../../images"
 import {
   Box,
   Flex,
@@ -12,7 +13,7 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 
-const Links = ['Dashboard', 'Projects', 'Team'];
+const Links = ['Home', 'About us', 'Projects', "Community"];
 
 const NavLink = ({ children }) => (
   <Link
@@ -22,6 +23,7 @@ const NavLink = ({ children }) => (
     _hover={{
       textDecoration: 'none',
       bg: useColorModeValue('gray.200', 'gray.700'),
+      color: '#00AAFC'
     }}
     href={'#'}>
     {children}
@@ -33,7 +35,8 @@ export default function Navbar() {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+      {/* <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}> */}
+      <Box px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -43,7 +46,8 @@ export default function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Logo</Box>
+          
+          <LogoRectangle id="main-logo-rectangle"/>
             
           </HStack>
           <Flex alignItems={'center'}>
@@ -55,14 +59,14 @@ export default function Navbar() {
                 <NavLink key={link}>{link}</NavLink>
               ))}
             </HStack>
-            <Button
+            {/* <Button
               variant={'solid'}
               colorScheme={'teal'}
               size={'sm'}
               ml={4}
               leftIcon={<AddIcon />}>
               Action
-            </Button>
+            </Button> */}
           </Flex>
         </Flex>
 
@@ -77,7 +81,7 @@ export default function Navbar() {
         ) : null}
       </Box>
 
-      <Box p={4}>Main Content Here</Box>
+      {/* <Box p={4}>Main Content Here</Box> */}
     </>
   );
 }
