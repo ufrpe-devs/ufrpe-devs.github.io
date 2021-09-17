@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier . --check --ignore-path .gitignore",
+    "format:fix": "prettier . --ignore-path .gitignore --write",
+    "validate": "yarn lint && yarn format"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.15",
@@ -20,6 +23,9 @@
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.1"
+    "eslint-config-next": "11.1.1",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.2",
+    "prettier": "^2.4.1"
   }
 }
