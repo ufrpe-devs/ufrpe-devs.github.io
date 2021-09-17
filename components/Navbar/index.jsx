@@ -23,7 +23,8 @@ const NavLink = ({ children }) => (
       textDecoration: 'none',
       bg: useColorModeValue('gray.200', 'gray.700'),
     }}
-    href={'#'}>
+    href={'#'}
+  >
     {children}
   </Link>
 );
@@ -44,13 +45,13 @@ export default function Navbar() {
           />
           <HStack spacing={8} alignItems={'center'}>
             <Box>Logo</Box>
-            
           </HStack>
           <Flex alignItems={'center'}>
-          <HStack
+            <HStack
               as={'nav'}
               spacing={4}
-              display={{ base: 'none', md: 'flex' }}>
+              display={{ base: 'none', md: 'flex' }}
+            >
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
@@ -60,7 +61,8 @@ export default function Navbar() {
               colorScheme={'teal'}
               size={'sm'}
               ml={4}
-              leftIcon={<AddIcon />}>
+              leftIcon={<AddIcon />}
+            >
               Action
             </Button>
           </Flex>
