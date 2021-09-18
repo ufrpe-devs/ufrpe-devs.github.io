@@ -9,26 +9,41 @@ import {
   Stack,
   useMediaQuery,
   Slide,
-  Collapse
+  Collapse,
+  Button
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { useEffect } from "react";
+import { theme } from "../../../../styles/theme";
 const Links = ['Home', 'About us', 'Projects', "Community"];
 
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={'md'}
-    _hover={{
-      textDecoration: 'none',
-      color: '#00AAFC'
-    }}
-    href={'#'}
-  >
-    {children}
-  </Link>
-);
+const handleClickScroll = (event, title) => {
+  let anchorTitle = title.replace(" ", "-").toLowerCase()
+  const yOffset = -10; 
+  const element = document.getElementById(anchorTitle);
+  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+  window.scrollTo({top: y, behavior: 'smooth'});
+};
+
+const NavLink = (props) => {
+  const { children, ...otherProps } = props
+  return (
+    <Button
+      px={5}
+      py={1} 
+      color={theme.colors.brand.tertiary}
+      variant="link"
+      _hover={{
+        textDecoration: 'none',
+        color: '#00AAFC',
+      }}
+      onClick={e => handleClickScroll(e, children)}
+    >
+      {children}
+   </Button>
+  )
+};
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -48,7 +63,7 @@ export default function Navbar() {
   return (
     <>
       {/* <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}> */}
-      <Box px={4} position="relative">
+      <Box px={4} position="sticky" top="0" bg="white" zIndex="1000">
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}

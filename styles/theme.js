@@ -21,6 +21,23 @@ export const theme = extendTheme({
         },
       },
 
+      "#about-us": {
+        minHeight: '100vh',
+        textAlign: 'center',
+        display: 'flex',
+        alignItems: 'center',
+        '@media screen and (max-width: 992px)': {
+          marginTop: 20
+        },
+        ".box-shadow-image": {
+          boxShadow: 'rgba(17, 12, 46, 0.15) 0px 48px 100px 0px',
+          borderRadius: 20,
+          '@media screen and (max-width: 992px)': {
+            margin: 'auto'
+          },
+        }
+      },
+
       "#main-logo-rectangle": {
         cursor: 'pointer',
         transition: '0.5s opacity',
@@ -41,9 +58,9 @@ export const theme = extendTheme({
         height:' auto',
       },
 
-      "#hero": {
+      "#home": {
         display: 'flex', 
-        minHeight: '85vh',
+        minHeight: '100vh',
         '@media screen and (max-width: 992px)': {
           marginTop: '20px',
           "#hero-community-button-1": {
@@ -63,6 +80,24 @@ export const theme = extendTheme({
             display: 'none'
           }
         },
+      },
+
+      ".title-anchor": {
+        textTransform: 'uppercase',
+        fontWeight: 700,
+        fontSize: 24,
+        color: '#718096'
+      },
+
+      ".subtitle": {
+        fontWeight: 700,
+        fontSize: 36,
+        marginTop: 19
+      },
+
+      ".description": {
+        marginTop: 10,
+        textAlign: 'left'
       }
     }),
   },
