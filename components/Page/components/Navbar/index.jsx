@@ -22,7 +22,6 @@ const NavLink = ({ children }) => (
     rounded={'md'}
     _hover={{
       textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
       color: '#00AAFC'
     }}
     href={'#'}
@@ -44,7 +43,7 @@ export default function Navbar() {
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={'Open Menu'}
             display={{ md: 'none' }}
-            onClick={isOpen ? onClose : onOpen}
+            onClick={isOpen ? onClose : onOpen }
           />
           <HStack spacing={8} alignItems={'center'}>
           
