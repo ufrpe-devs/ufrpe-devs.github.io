@@ -8,10 +8,16 @@ export const theme = extendTheme({
         display: "flex",
         height: "100vh",
         width: "100vw",
-        padding: "4vh 3vw",
-        "div:first-child": {
-          width: '100%',
-          position: 'relative'
+      },
+
+      "#__next": {
+        width: '100%',
+        position: 'relative'
+      },
+
+      "#container": {
+        '@media screen and (max-width: 1320px)': {
+          padding: "4vh 3vw",
         },
       },
 
@@ -37,7 +43,7 @@ export const theme = extendTheme({
 
       "#hero": {
         display: 'flex', 
-        height: '80vh',
+        minHeight: '85vh',
         '@media screen and (max-width: 992px)': {
           marginTop: '20px',
           "#hero-community-button-1": {
