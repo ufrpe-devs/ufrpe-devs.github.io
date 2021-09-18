@@ -6,7 +6,6 @@ import {
   IconButton,
   useDisclosure,
   Stack,
-  useMediaQuery,
   Collapse,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
