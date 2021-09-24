@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class UfrpeDevsDocument extends Document {
@@ -6,21 +6,18 @@ class UfrpeDevsDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta charSet="utf-8" />
           <link rel="shortcut icon" href="assets/favicon.png" />
-          {/* PWA primary color */}
-          <meta name="theme-color" content="#d72027"/>
-          <meta name="msapplication-navbutton-color" content="#d72027"/>
-          <meta name="apple-mobile-web-app-status-bar-style" content="#d72027"/>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="preconnect" href="https://fonts.googleapis.com"/>
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+          />
         </Head>
-      
         <body>
-            <Main />
-            <NextScript />
+          <Main />
+          <NextScript />
         </body>
       </Html>
     );
@@ -43,4 +40,3 @@ class UfrpeDevsDocument extends Document {
 // }
 
 export default UfrpeDevsDocument;
-

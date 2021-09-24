@@ -1,10 +1,10 @@
-import Page from "../components/Page"
-import { Hero } from "../components/Home"
+import Page from '../components/Page';
+import { Hero } from '../components/Home';
 
 export default function Home() {
   return (
     <Page>
-      <Hero/>
+      <Hero />
     </Page>
-  )
+  );
 }

@@ -9,13 +9,13 @@ module.exports = {
       test: /\.svg$/,
       issuer: {
         // test: /\.(js|ts)x?$/,
-        and: [/\.(js|ts)x?$/] 
-       // for webpack 5 u`se
+        and: [/\.(js|ts)x?$/],
+        // for webpack 5 u`se
       },
-      
+
       use: ['@svgr/webpack'],
     });
 
     return config;
   },
-}
+};

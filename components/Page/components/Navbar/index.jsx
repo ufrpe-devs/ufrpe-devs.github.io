@@ -1,4 +1,3 @@
-import { LogoRectangle } from "../../../../images"
 import {
   Box,
   Flex,
@@ -8,12 +7,14 @@ import {
   useDisclosure,
   Stack,
   useMediaQuery,
-  Slide,
-  Collapse
+  Collapse,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import { useEffect } from "react";
-const Links = ['Home', 'About us', 'Projects', "Community"];
+
+import { LogoRectangle, LogoSmall } from '../../../../images';
+import styles from './styles';
+
+const Links = ['Home', 'About us', 'Projects', 'Community'];
 
 const NavLink = ({ children }) => (
   <Link
@@ -22,7 +23,7 @@ const NavLink = ({ children }) => (
     rounded={'md'}
     _hover={{
       textDecoration: 'none',
-      color: '#00AAFC'
+      color: 'colors.brand.secondary',
     }}
     href={'#'}
   >
@@ -32,37 +33,23 @@ const NavLink = ({ children }) => (
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [isTinyThan767] = useMediaQuery("(max-width: 767px)")
-
-  useEffect(() => {
-    if(isTinyThan767) {
-      document.getElementById("main-logo-rectangle").setAttribute("width", 125)
-      document.getElementById("main-logo-rectangle").setAttribute("viewBox", "0 0 20 170")
-      return
-    } 
-    document.getElementById("main-logo-rectangle").setAttribute("width", 228)
-    document.getElementById("main-logo-rectangle").setAttribute("viewBox", "0 0 1020 170")
-
-  }, [isTinyThan767])
 
   return (
     <>
-      {/* <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}> */}
-      <Box px={4}>
+      <Box px={4} __css={styles}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={'Open Menu'}
             display={{ md: 'none' }}
-            onClick={isOpen ? onClose : onOpen }
+            onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-          
-          <LogoRectangle id="main-logo-rectangle" />
-            
+            <LogoRectangle className="navbar__logo navbar__logo--desktop" />
+            <LogoSmall className="navbar__logo navbar__logo--mobile" />
           </HStack>
-          <Flex alignItems={'center'}>
+          <Flex alignItems={'center'} className="navbar__nav">
             <HStack
               as={'nav'}
               spacing={4}
@@ -72,30 +59,19 @@ export default function Navbar() {
                 <NavLink key={link}>{link}</NavLink>
               ))}
             </HStack>
-            {/* <Button
-              variant={'solid'}
-              colorScheme={'teal'}
-              size={'sm'}
-              ml={4}
-              leftIcon={<AddIcon />}
-            >
-              Action
-            </Button> */}
           </Flex>
         </Flex>
 
         <Collapse in={isOpen} animateOpacity>
-          <hr/>
+          <hr />
           <Stack as={'nav'} spacing={4}>
             {Links.map((link) => (
               <NavLink key={link}>{link}</NavLink>
             ))}
           </Stack>
-          <hr/>
+          <hr />
         </Collapse>
       </Box>
-
-      {/* <Box p={4}>Main Content Here</Box> */}
     </>
   );
 }

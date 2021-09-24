@@ -1,5 +1,4 @@
-import Head from 'next/head'
-import { Navbar } from './components'
+import { Navbar } from './components';
 
 export default function Page({ children }) {
   return (
@@ -7,6 +6,5 @@ export default function Page({ children }) {
       <Navbar />
       {children}
     </>
-    
-  )
+  );
 }
