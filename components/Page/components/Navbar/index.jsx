@@ -1,18 +1,20 @@
-import { ReactNode } from 'react';
 import {
   Box,
   Flex,
   HStack,
   Link,
   IconButton,
-  Button,
   useDisclosure,
-  useColorModeValue,
   Stack,
+  useMediaQuery,
+  Collapse,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-const Links = ['Dashboard', 'Projects', 'Team'];
+import { LogoRectangle, LogoSmall } from '../../../../images';
+import styles from './styles';
+
+const Links = ['Home', 'About us', 'Projects', 'Community'];
 
 const NavLink = ({ children }) => (
   <Link
@@ -21,7 +23,7 @@ const NavLink = ({ children }) => (
     rounded={'md'}
     _hover={{
       textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
+      color: 'colors.brand.secondary',
     }}
     href={'#'}
   >
@@ -34,7 +36,7 @@ export default function Navbar() {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+      <Box px={4} __css={styles}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -44,9 +46,10 @@ export default function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Logo</Box>
+            <LogoRectangle className="navbar__logo navbar__logo--desktop" />
+            <LogoSmall className="navbar__logo navbar__logo--mobile" />
           </HStack>
-          <Flex alignItems={'center'}>
+          <Flex alignItems={'center'} className="navbar__nav">
             <HStack
               as={'nav'}
               spacing={4}
@@ -56,30 +59,19 @@ export default function Navbar() {
                 <NavLink key={link}>{link}</NavLink>
               ))}
             </HStack>
-            <Button
-              variant={'solid'}
-              colorScheme={'teal'}
-              size={'sm'}
-              ml={4}
-              leftIcon={<AddIcon />}
-            >
-              Action
-            </Button>
           </Flex>
         </Flex>
 
-        {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-            </Stack>
-          </Box>
-        ) : null}
+        <Collapse in={isOpen} animateOpacity>
+          <hr />
+          <Stack as={'nav'} spacing={4}>
+            {Links.map((link) => (
+              <NavLink key={link}>{link}</NavLink>
+            ))}
+          </Stack>
+          <hr />
+        </Collapse>
       </Box>
-
-      <Box p={4}>Main Content Here</Box>
     </>
   );
 }
