@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
 
-import { AstronautLogo, HackClub } from '../../images';
+import { AstronautLogo } from '../../images';
 import styles from './styles';
 
 export default function Footer() {
@@ -29,9 +29,6 @@ export default function Footer() {
               Universidade Federal Rural de Pernambuco
             </p>
           </Box>
-        </Box>
-        <Box className="footer__container item">
-          <HackClub />
         </Box>
       </Box>
     </Box>
