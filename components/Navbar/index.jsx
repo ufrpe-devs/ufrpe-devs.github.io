@@ -1,10 +1,10 @@
+import { useState } from 'react';
 import {
   Box,
   Flex,
   HStack,
   Link,
   IconButton,
-  useDisclosure,
   Stack,
   Collapse,
 } from '@chakra-ui/react';
@@ -31,7 +31,7 @@ const NavLink = ({ children }) => (
 );
 
 export default function Navbar() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [isOpen, setIsOpen] = useState();
 
   return (
     <>
@@ -42,7 +42,7 @@ export default function Navbar() {
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={'Open Menu'}
             display={{ md: 'none' }}
-            onClick={isOpen ? onClose : onOpen}
+            onClick={() => setIsOpen(!isOpen)}
           />
           <HStack spacing={8} alignItems={'center'}>
             <LogoRectangle className="navbar__logo navbar__logo--desktop" />
