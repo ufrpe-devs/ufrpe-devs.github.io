@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-import { LogoRectangle, LogoSmall } from '../../../../images';
+import { LogoRectangle, LogoSmall } from '../../images';
 import styles from './styles';
 
 const Links = ['Home', 'About us', 'Projects', 'Community'];

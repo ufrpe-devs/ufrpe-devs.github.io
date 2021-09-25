@@ -1,5 +1,5 @@
-import Page from "../components/Page"
-import { Hero } from "../components/Home"
+import Page from '../components/Template';
+import Hero from '../components/Hero';
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
 import { SimpleGrid, Box, Button, useMediaQuery } from '@chakra-ui/react';
-import { Community } from '../../../../images';
+import { Community } from '../../images';
 
 import styles from './styles';
 
@@ -7,7 +7,7 @@ export default function Hero() {
   const [isTinyThan767] = useMediaQuery('(max-width: 767px)');
 
   return (
-    <Box id="home" __css={styles}>
+    <Box id="home" __css={styles} px={4} mb={8}>
       <SimpleGrid columns={{ md: 1, lg: 2 }} gap={6}>
         <Box w="100%" style={{ margin: 'auto' }}>
           <Box

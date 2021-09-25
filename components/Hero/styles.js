@@ -1,6 +1,5 @@
 const styles = {
   display: 'flex',
-  height: '80vh',
   '.hero_image': {
     width: 'auto',
     height: ' auto',
