@@ -1,4 +1,6 @@
 const styles = {
+  width: '100%',
+  position: 'relative',
   '.navbar__logo': {
     cursor: 'pointer',
     transition: '0.5s opacity',
@@ -7,7 +9,7 @@ const styles = {
     },
   },
   '@media screen and (max-width: 767px)': {
-    position: 'absolute',
+    // position: 'absolute',
     right: 0,
     '.navbar__logo--desktop': {
       display: 'none',

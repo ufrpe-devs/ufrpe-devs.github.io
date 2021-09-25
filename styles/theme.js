@@ -5,14 +5,6 @@ export const theme = extendTheme({
     global: (props) => ({
       body: {
         fontFamily: 'inter',
-        display: 'flex',
-        height: '100vh',
-        width: '100vw',
-        padding: '4vh 3vw',
-        'div:first-child': {
-          width: '100%',
-          position: 'relative',
-        },
       },
     }),
   },
