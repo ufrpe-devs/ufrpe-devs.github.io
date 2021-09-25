@@ -1,11 +1,11 @@
 const styles = {
   '@media screen and (max-width: 767px)': {
     '.footer__container': {
-      'flex-direction': 'column',
+      flexDirection: 'column',
       '.item': {
-        'margin-bottom': '1rem',
+        marginBottom: '1rem',
         p: {
-          'text-align': 'center',
+          textAlign: 'center',
         },
       },
     },
