@@ -10,6 +10,9 @@ const styles = {
       },
     },
   },
+  '.footer__container .item p': {
+    fontSize: '14px',
+  },
 };
 
 export default styles;
