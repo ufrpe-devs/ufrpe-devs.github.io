@@ -1,49 +1,32 @@
-name: Deploy to GitHub Pages
+name: GitHub Pages
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [main]
+    branches:
+      - main
+  pull_request:
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "deploy"
   deploy:
-    # The type of runner that the job will run on
     runs-on: ubuntu-20.04
-
-    strategy:
-      # TODO: Habilitar fail-fast para garantir um deploy bem sucedido!
-      # Desabilita fail-fast
-      fail-fast: false
-
-      matrix:
-        node-version: [14.x]
-
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v2
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - name: Setup Node
+        uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+          node-version: '14'
 
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-
-
+            ${{ runner.os }}-node-
+      
       - name: Build
         run: |
           npm ci
@@ -51,8 +34,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-          user_name: 'ufrpedevs'
-          user_email: 'ufrpedevs@gmail.com'
+          publish_dir: ./public
