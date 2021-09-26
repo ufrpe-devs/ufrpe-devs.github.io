@@ -1,21 +1,22 @@
-import { SimpleGrid, Box, Button, useMediaQuery } from '@chakra-ui/react';
-import { Community } from '../../images';
+import React from "react"
+import { SimpleGrid, Box, Button, useMediaQuery } from "@chakra-ui/react"
+import community from "../../assets/community.svg"
 
-import styles from './styles';
+import styles from "./styles"
 
 export default function Hero() {
-  const [isTinyThan767] = useMediaQuery('(max-width: 767px)');
+  const [isTinyThan767] = useMediaQuery("(max-width: 767px)")
 
   return (
     <Box id="home" __css={styles} px={4} mb={8}>
       <SimpleGrid columns={{ md: 1, lg: 2 }} gap={6}>
-        <Box w="100%" style={{ margin: 'auto' }}>
+        <Box w="100%" style={{ margin: "auto" }}>
           <Box
             style={{
               fontSize: 72,
               fontWeight: 700,
               lineHeight: 1,
-              width: isTinyThan767 ? '100%' : '90%',
+              width: isTinyThan767 ? "100%" : "90%",
             }}
           >
             Boas vindas ao UFRPE Devs
@@ -25,7 +26,7 @@ export default function Hero() {
             style={{
               fontSize: 20,
               fontWeight: 400,
-              width: isTinyThan767 ? '100%' : '90%',
+              width: isTinyThan767 ? "100%" : "90%",
             }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -41,8 +42,8 @@ export default function Hero() {
             Community
           </Button>
         </Box>
-        <Box w="100%" style={{ display: 'flex', alignItems: 'center' }}>
-          <Community className="hero__image" />
+        <Box w="100%" style={{ display: "flex", alignItems: "center" }}>
+          <img src={community} alt="community" />
         </Box>
         <Button
           bg="brand.secondary"
@@ -53,5 +54,5 @@ export default function Hero() {
         </Button>
       </SimpleGrid>
     </Box>
-  );
+  )
 }

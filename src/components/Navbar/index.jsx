@@ -1,0 +1,85 @@
+import React, { useState } from "react"
+import {
+  Box,
+  Flex,
+  HStack,
+  Link,
+  IconButton,
+  Stack,
+  Collapse,
+} from "@chakra-ui/react"
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons"
+
+import logoRectangle from "../../assets/logo-rectangle.svg"
+import LogoSmall from "../../assets/logo-small.svg"
+import styles from "./styles"
+
+const Links = ["Home", "About us", "Projects", "Community"]
+
+const NavLink = ({ children }) => (
+  <Link
+    px={2}
+    py={1}
+    rounded={"md"}
+    _hover={{
+      textDecoration: "none",
+      color: "colors.brand.secondary",
+    }}
+    href={"#"}
+  >
+    {children}
+  </Link>
+)
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState()
+
+  return (
+    <>
+      <Box px={4} __css={styles}>
+        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+          <IconButton
+            size={"md"}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={"Open Menu"}
+            display={{ md: "none" }}
+            onClick={() => setIsOpen(!isOpen)}
+          />
+          <HStack spacing={8} alignItems={"center"}>
+            <img
+              src={logoRectangle}
+              className="navbar__logo navbar__logo--desktop"
+              alt="logo"
+            />
+            <img
+              src={LogoSmall}
+              className="navbar__logo navbar__logo--mobile"
+              alt="logo"
+            />
+          </HStack>
+          <Flex alignItems={"center"} className="navbar__nav">
+            <HStack
+              as={"nav"}
+              spacing={4}
+              display={{ base: "none", md: "flex" }}
+            >
+              {Links.map(link => (
+                <NavLink key={link}>{link}</NavLink>
+              ))}
+            </HStack>
+          </Flex>
+        </Flex>
+
+        <Collapse in={isOpen} animateOpacity>
+          <hr />
+          <Stack as={"nav"} spacing={4}>
+            {Links.map(link => (
+              <NavLink key={link}>{link}</NavLink>
+            ))}
+          </Stack>
+          <hr />
+        </Collapse>
+      </Box>
+    </>
+  )
+}

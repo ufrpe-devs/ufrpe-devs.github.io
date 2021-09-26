@@ -46,9 +46,8 @@ jobs:
 
       - name: Build
         run: |
-          yarn install --frozen-lockfile
-          yarn build
-          yarn export
+          npm ci
+          npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
