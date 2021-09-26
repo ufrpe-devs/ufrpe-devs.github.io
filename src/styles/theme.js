@@ -4,7 +4,7 @@ export default extendTheme({
   styles: {
     global: props => ({
       body: {
-        fontFamily: "inter",
+        fontFamily: "Inter",
       },
     }),
   },
