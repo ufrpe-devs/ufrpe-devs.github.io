@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from 'react';
 import {
   Box,
   Flex,
@@ -7,45 +7,45 @@ import {
   IconButton,
   Stack,
   Collapse,
-} from "@chakra-ui/react"
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons"
+} from '@chakra-ui/react';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-import logoRectangle from "../../assets/logo-rectangle.svg"
-import LogoSmall from "../../assets/logo-small.svg"
-import styles from "./styles"
+import logoRectangle from '../../assets/logo-rectangle.svg';
+import LogoSmall from '../../assets/logo-small.svg';
+import styles from './styles';
 
-const Links = ["Home", "About us", "Projects", "Community"]
+const Links = ['Home', 'About us', 'Projects', 'Community'];
 
 const NavLink = ({ children }) => (
   <Link
     px={2}
     py={1}
-    rounded={"md"}
+    rounded={'md'}
     _hover={{
-      textDecoration: "none",
-      color: "colors.brand.secondary",
+      textDecoration: 'none',
+      color: 'colors.brand.secondary',
     }}
-    href={"#"}
+    href={'#'}
   >
     {children}
   </Link>
-)
+);
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState()
+  const [isOpen, setIsOpen] = useState();
 
   return (
     <>
       <Box px={4} __css={styles}>
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
-            size={"md"}
+            size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={"Open Menu"}
-            display={{ md: "none" }}
+            aria-label={'Open Menu'}
+            display={{ md: 'none' }}
             onClick={() => setIsOpen(!isOpen)}
           />
-          <HStack spacing={8} alignItems={"center"}>
+          <HStack spacing={8} alignItems={'center'}>
             <img
               src={logoRectangle}
               className="navbar__logo navbar__logo--desktop"
@@ -57,13 +57,13 @@ export default function Navbar() {
               alt="logo"
             />
           </HStack>
-          <Flex alignItems={"center"} className="navbar__nav">
+          <Flex alignItems={'center'} className="navbar__nav">
             <HStack
-              as={"nav"}
+              as={'nav'}
               spacing={4}
-              display={{ base: "none", md: "flex" }}
+              display={{ base: 'none', md: 'flex' }}
             >
-              {Links.map(link => (
+              {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
             </HStack>
@@ -72,8 +72,8 @@ export default function Navbar() {
 
         <Collapse in={isOpen} animateOpacity>
           <hr />
-          <Stack as={"nav"} spacing={4}>
-            {Links.map(link => (
+          <Stack as={'nav'} spacing={4}>
+            {Links.map((link) => (
               <NavLink key={link}>{link}</NavLink>
             ))}
           </Stack>
@@ -81,5 +81,5 @@ export default function Navbar() {
         </Collapse>
       </Box>
     </>
-  )
+  );
 }

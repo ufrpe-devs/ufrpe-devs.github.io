@@ -1,18 +1,18 @@
 const styles = {
-  "@media screen and (max-width: 767px)": {
-    ".footer__container": {
-      flexDirection: "column",
-      ".item": {
-        marginBottom: "1rem",
+  '@media screen and (max-width: 767px)': {
+    '.footer__container': {
+      flexDirection: 'column',
+      '.item': {
+        marginBottom: '1rem',
         p: {
-          textAlign: "center",
+          textAlign: 'center',
         },
       },
     },
   },
-  ".footer__container .item p": {
-    fontSize: "14px",
+  '.footer__container .item p': {
+    fontSize: '14px',
   },
-}
+};
 
-export default styles
+export default styles;

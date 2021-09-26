@@ -5,6 +5,6 @@
  */
 
 // You can delete this file if you're not using it
-import { pageWrapper as wrapper } from "./src/wrapper"
+import { pageWrapper as wrapper } from './src/wrapper';
 
-export const wrapPageElement = wrapper
+export const wrapPageElement = wrapper;

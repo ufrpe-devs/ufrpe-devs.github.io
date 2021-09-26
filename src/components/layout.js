@@ -5,13 +5,13 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
-import PropTypes from "prop-types"
+import * as React from 'react';
+import PropTypes from 'prop-types';
 // import { useStaticQuery, graphql } from "gatsby"
-import { Box } from "@chakra-ui/react"
+import { Box } from '@chakra-ui/react';
 
-import Navbar from "./Navbar"
-import Footer from "./Footer"
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
@@ -35,11 +35,11 @@ const Layout = ({ children }) => {
       <main>{children}</main>
       <Footer />
     </Box>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

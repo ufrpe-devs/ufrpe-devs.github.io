@@ -1,8 +1,8 @@
-import React from "react"
-import { Box } from "@chakra-ui/react"
+import React from 'react';
+import { Box } from '@chakra-ui/react';
 
-import astronautLogo from "../../assets/astronaut-logo.svg"
-import styles from "./styles"
+import astronautLogo from '../../assets/astronaut-logo.svg';
+import styles from './styles';
 
 export default function Footer() {
   return (
@@ -33,5 +33,5 @@ export default function Footer() {
         </Box>
       </Box>
     </Box>
-  )
+  );
 }

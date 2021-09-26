@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react';
 
-import { ChakraProvider } from "@chakra-ui/react"
-import { Helmet } from "react-helmet"
+import { ChakraProvider } from '@chakra-ui/react';
+import { Helmet } from 'react-helmet';
 
-import theme from "./styles/theme"
-import Layout from "./components/layout"
+import theme from './styles/theme';
+import Layout from './components/layout';
 
 export const pageWrapper = ({ element }) => {
   return (
@@ -21,5 +21,5 @@ export const pageWrapper = ({ element }) => {
         <Layout>{element}</Layout>
       </ChakraProvider>
     </>
-  )
-}
+  );
+};

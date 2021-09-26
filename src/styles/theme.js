@@ -1,18 +1,18 @@
-import { extendTheme } from "@chakra-ui/react"
+import { extendTheme } from '@chakra-ui/react';
 
 export default extendTheme({
   styles: {
-    global: props => ({
+    global: (props) => ({
       body: {
-        fontFamily: "Inter",
+        fontFamily: 'Inter',
       },
     }),
   },
   colors: {
     brand: {
-      primary: "#122E4B",
-      secondary: "#00AAFC",
-      tertiary: "#718096",
+      primary: '#122E4B',
+      secondary: '#00AAFC',
+      tertiary: '#718096',
     },
   },
-})
+});
