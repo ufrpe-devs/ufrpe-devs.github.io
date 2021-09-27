@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Flex,
@@ -10,12 +10,21 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-import { LogoRectangle, LogoSmall } from '../../images';
+import logoRectangle from '../../assets/logo-rectangle.svg';
+import LogoSmall from '../../assets/logo-small.svg';
 import styles from './styles';
 
-const Links = ['Home', 'About us', 'Projects', 'Community'];
+const Links = [
+  { name: 'Home', value: '#home', external: false },
+  { name: 'Github', value: 'https://github.com/ufrpe-devs', external: true },
+  {
+    name: 'Discord',
+    value: 'https://discord.com/invite/xeEaKKG',
+    external: true,
+  },
+];
 
-const NavLink = ({ children }) => (
+const NavLink = ({ link, external, children }) => (
   <Link
     px={2}
     py={1}
@@ -24,7 +33,8 @@ const NavLink = ({ children }) => (
       textDecoration: 'none',
       color: 'colors.brand.secondary',
     }}
-    href={'#'}
+    href={link}
+    target={external ? '_blank' : '_self'}
   >
     {children}
   </Link>
@@ -45,8 +55,16 @@ export default function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <LogoRectangle className="navbar__logo navbar__logo--desktop" />
-            <LogoSmall className="navbar__logo navbar__logo--mobile" />
+            <img
+              src={logoRectangle}
+              className="navbar__logo navbar__logo--desktop"
+              alt="logo"
+            />
+            <img
+              src={LogoSmall}
+              className="navbar__logo navbar__logo--mobile"
+              alt="logo"
+            />
           </HStack>
           <Flex alignItems={'center'} className="navbar__nav">
             <HStack
@@ -54,8 +72,10 @@ export default function Navbar() {
               spacing={4}
               display={{ base: 'none', md: 'flex' }}
             >
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+              {Links.map(({ name, value, external }) => (
+                <NavLink key={value} link={value} external={external}>
+                  {name}
+                </NavLink>
               ))}
             </HStack>
           </Flex>
@@ -64,8 +84,10 @@ export default function Navbar() {
         <Collapse in={isOpen} animateOpacity>
           <hr />
           <Stack as={'nav'} spacing={4}>
-            {Links.map((link) => (
-              <NavLink key={link}>{link}</NavLink>
+            {Links.map(({ name, value, external }) => (
+              <NavLink key={value} link={value} external={external}>
+                {name}
+              </NavLink>
             ))}
           </Stack>
           <hr />

@@ -1,6 +1,7 @@
+import React from 'react';
 import { Box } from '@chakra-ui/react';
 
-import { AstronautLogo } from '../../images';
+import astronautLogo from '../../assets/astronaut-logo.svg';
 import styles from './styles';
 
 export default function Footer() {
@@ -16,7 +17,7 @@ export default function Footer() {
     >
       <Box display="flex" alignItems="center" className="footer__container">
         <Box className="footer__container item">
-          <AstronautLogo />
+          <img src={astronautLogo} alt="astronault logo" />
         </Box>
         <Box flex={1} color="white" className="footer__container item">
           <Box>

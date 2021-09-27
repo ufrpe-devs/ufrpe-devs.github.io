@@ -1,9 +1,5 @@
 const styles = {
   display: 'flex',
-  '.hero_image': {
-    width: 'auto',
-    height: ' auto',
-  },
   '@media screen and (max-width: 992px)': {
     marginTop: '20px',
     '.hero__community-button--desktop': {

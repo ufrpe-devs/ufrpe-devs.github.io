@@ -1,5 +1,6 @@
+import React from 'react';
 import { SimpleGrid, Box, Button, useMediaQuery } from '@chakra-ui/react';
-import { Community } from '../../images';
+import community from '../../assets/community.svg';
 
 import styles from './styles';
 
@@ -42,7 +43,7 @@ export default function Hero() {
           </Button>
         </Box>
         <Box w="100%" style={{ display: 'flex', alignItems: 'center' }}>
-          <Community className="hero__image" />
+          <img src={community} alt="community" />
         </Box>
         <Button
           bg="brand.secondary"
