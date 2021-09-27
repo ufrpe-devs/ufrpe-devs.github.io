@@ -5,7 +5,6 @@ module.exports = {
     author: `@ufrpe-devs`,
     siteUrl: `https://ufrpe-devs.github.io`,
   },
-  pathPrefix: '/ufrpe-devs.github.io',
   plugins: [
     {
       resolve: '@chakra-ui/gatsby-plugin',
