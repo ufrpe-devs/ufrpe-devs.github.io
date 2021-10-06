@@ -22,5 +22,5 @@ jobs:
     - name: Run Prettier check
       uses: creyD/prettier_action@v3.3
       with:
-        prettier_options: --config ./.prettierrc --check **/*.{js,jsx,md}
+        prettier_options: --config ./.prettierrc --check "**/*.{js,jsx,md}"
         dry: True
