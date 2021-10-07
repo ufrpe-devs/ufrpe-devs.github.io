@@ -22,4 +22,19 @@ jobs:
         run: npm ci
         
       - name: Run ESLint
-        run: npx eslint . --ext .js,.jsx
+        run: |
+          npx eslint . --ext .js,.jsx
+          npx eslint --output-file eslint_report.json --format json src
+        continue-on-error: true
+        
+      - name: Annotate Code Linting Results
+        uses: ataylorme/eslint-annotate-action@1.2.0
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          report-json: "eslint_report.json"
+
+      - name: Upload ESLint report
+        uses: actions/upload-artifact@v2
+        with:
+          name: eslint_report.json
+          path: eslint_report.json
