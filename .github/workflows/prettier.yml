@@ -1,4 +1,4 @@
-name: Prettier
+name: Prettier Check
 
 on:
   pull_request:
@@ -13,14 +13,14 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
       with:
-        fetch-depth: 0
-        ref: ${{ github.head_ref }}
-        # Make sure the value of GITHUB_TOKEN will not be persisted in repo's config
-        persist-credentials: false
+        node-version: '14'
+        
+    - name: Install prettier
+      run: npm install --save-dev --save-exact prettier
 
     - name: Run Prettier check
-      uses: creyD/prettier_action@v3.3
-      with:
-        prettier_options: --config ./.prettierrc --check **/*.{js,jsx,md}
-        dry: True
+      run: npx prettier --check **/*.{js,jsx,md}
