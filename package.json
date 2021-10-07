@@ -40,7 +40,9 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lint": "eslint . --ext .js,.jsx",
+    "lint-report": "eslint . --output-file eslint_report.json --format json --ext .js,.jsx"
   },
   "repository": {
     "type": "git",

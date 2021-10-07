@@ -22,11 +22,11 @@ jobs:
         run: npm ci
         
       - name: Run ESLint
-        run: npx eslint . --ext .js,.jsx
+        run: npm run lint
         continue-on-error: true
         
       - name: Save Code Linting Report
-        run: npx eslint --output-file eslint_report.json --format json src
+        run: npm run lint-report
         continue-on-error: true
         
       - name: Annotate Code Linting Results
