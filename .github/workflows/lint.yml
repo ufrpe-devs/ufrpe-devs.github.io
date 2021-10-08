@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
@@ -20,23 +20,6 @@ jobs:
 
       - name: Install modules
         run: npm ci
-        
+
       - name: Run ESLint
         run: npm run lint
-        continue-on-error: true
-        
-      - name: Save Code Linting Report
-        run: npm run lint-report
-        continue-on-error: true
-        
-      - name: Annotate Code Linting Results
-        uses: ataylorme/eslint-annotate-action@1.2.0
-        with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          report-json: "eslint_report.json"
-
-      - name: Upload ESLint report
-        uses: actions/upload-artifact@v2
-        with:
-          name: eslint_report.json
-          path: eslint_report.json
