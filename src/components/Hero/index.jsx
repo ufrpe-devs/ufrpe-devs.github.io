@@ -29,9 +29,8 @@ export default function Hero() {
               width: isTinyThan767 ? '100%' : '90%',
             }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            blandit lectus ac dapibus suscipit. Ut cursus dignissim velit ut
-            fermentum.
+            Nós somos uma comunidade de desenvolvimento open source da Universidade Federal Rural de Pernambuco.
+            Juntos buscamos incentivar e praticar diariamente o compartilhamento de conhecimento e a socialização entre todos os cursos de tecnologia da UFRPE.
           </Box>
           <Button
             bg="brand.secondary"
