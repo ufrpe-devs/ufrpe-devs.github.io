@@ -40,7 +40,7 @@ const DiscordPage = () => {
       <Flex alignItems="center">
         <Circle color="#58B286" /> {discordPresenceCount} Online
       </Flex>
-      <a href={discordInvitationLink} target="_blank">
+      <a href={discordInvitationLink} target="_blank" rel="noreferrer">
         <Button bg="brand.secondary" color="white">Continuar</Button>
       </a>
     </VStack>
