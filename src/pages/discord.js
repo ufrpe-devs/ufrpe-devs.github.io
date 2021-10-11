@@ -39,7 +39,6 @@ const DiscordPage = () => {
         <Image
           src={discordLogo}
           alt="discord logo"
-          style={styles.discordLogo}
         />
         <Heading as="h1" size="4xl" textAlign="center">
           Junte-se ao nosso Discord
