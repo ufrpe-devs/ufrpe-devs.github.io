@@ -14,16 +14,6 @@ const Circle = styled.div`
   background-color: ${(props) => props.color};
 `;
 
-const styles = {
-  content: {
-    paddingTop: '16px',
-    paddingBottom: '16px',
-  },
-  discordLogo: {
-    paddingRight: '8px',
-    paddingLeft: '8px',
-  },
-};
 
 const DiscordPage = () => {
   const [discordInvitationLink, setDiscordInvitationLink] = React.useState();
@@ -45,7 +35,7 @@ const DiscordPage = () => {
   return (
     <>
       <Seo title="Junte-se ao nosso Discord" />
-      <VStack direction="column" spacing={8} style={styles.content}>
+      <VStack direction="column" spacing={8} px={4} my={8}>
         <Image
           src={discordLogo}
           alt="discord logo"
