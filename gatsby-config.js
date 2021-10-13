@@ -1,3 +1,9 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
+const { GATSBY_GA_ID } = process.env;
+
 module.exports = {
   siteMetadata: {
     title: `UFRPE Devs`,
@@ -33,6 +39,12 @@ module.exports = {
         background_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [GATSBY_GA_ID],
       },
     },
   ],
