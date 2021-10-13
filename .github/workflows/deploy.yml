@@ -88,3 +88,29 @@ jobs:
           publish_dir: ./public
           user_name: 'ufrpedevs'
           user_email: 'ufrpedevs@gmail.com'
+  
+  release:
+    runs-on: ubuntu-20.04
+    needs: deploy
+    if: github.event_name == 'milestone'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build Changelog
+        id: github_release_build
+        uses: mikepenz/release-changelog-builder-action@v2
+        with:
+          configuration: "./.github/workflows/changelog-config.json"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create GitHub Release
+        uses: actions/create-release@1
+        with: 
+          tag_name: ${{ github.event.milestone.title }}
+          release_name: ${{ github.event.milestone.title }}
+          body: ${{ steps.github_release_build.outputs.changelog }}
+          draft: true #That is temporary, may be removed after test
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
