@@ -15,12 +15,12 @@ import LogoSmall from '../../assets/logo-small.svg';
 import styles from './styles';
 
 const Links = [
-  { name: 'Home', value: '#home', external: false },
+  { name: 'Home', value: '/', external: false },
   { name: 'Github', value: 'https://github.com/ufrpe-devs', external: true },
   {
     name: 'Discord',
-    value: 'https://discord.com/invite/xeEaKKG',
-    external: true,
+    value: '/discord',
+    external: false,
   },
 ];
 
