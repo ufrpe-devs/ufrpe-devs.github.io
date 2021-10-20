@@ -97,6 +97,11 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 100
+          
+      - name: debug
+        run: |
+            git rev-list --tags --skip=0 --max-count=1
+            git describe --abbrev=0 --tags
 
       - name: Build Changelog
         id: github_release_build
