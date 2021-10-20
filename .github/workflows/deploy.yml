@@ -98,10 +98,8 @@ jobs:
         with:
           fetch-depth: 100
           
-      - name: debug
-        run: |
-            git rev-list --tags --skip=0 --max-count=1
-            git describe --abbrev=0 --tags
+      - name: Fetch from history
+        run: git fetch --prune --unshallow --tags
 
       - name: Build Changelog
         id: github_release_build
