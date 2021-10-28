@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types'
 import {
   Box,
   Flex,
@@ -38,7 +39,12 @@ const NavLink = ({ link, external, children }) => (
   >
     {children}
   </Link>
-);
+)
+NavLink.propTypes = {
+  link: PropTypes.string.isRequired,
+  external: PropTypes.string,
+  children: PropTypes.node,
+};
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState();

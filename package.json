@@ -26,6 +26,8 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.26.1",
     "prettier": "2.4.1"
   },
   "keywords": [
@@ -39,7 +41,9 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lint": "eslint . --ext .js,.jsx",
+    "lint-report": "eslint . --output-file eslint_report.json --format json --ext .js,.jsx"
   },
   "repository": {
     "type": "git",

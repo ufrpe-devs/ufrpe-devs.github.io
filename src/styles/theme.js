@@ -2,7 +2,7 @@ import { extendTheme } from '@chakra-ui/react';
 
 export default extendTheme({
   styles: {
-    global: (props) => ({
+    global: () => ({
       body: {
         fontFamily: 'Inter',
       },
