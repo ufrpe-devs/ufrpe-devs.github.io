@@ -1,7 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
@@ -19,7 +18,7 @@ function HomepageHeader() {
         </p>
         <div className={styles.buttons}>
           <Link className="button button--secondary button--lg" to="/community">
-            Comunidade
+            {'Comunidade'}
           </Link>
         </div>
       </div>
@@ -28,10 +27,9 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Home | ${siteConfig.title}`}
+      title="Home"
       description="Welcome to UFRPE Devs"
     >
       <HomepageHeader />
