@@ -7,7 +7,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'ufrpe-devs',
-  tagline: 'Somos uma comunidade de pessoas desenvolvedoras da Universidade Federal Rural de Pernambuco (UFRPE)',
+  tagline:
+    'Somos uma comunidade de pessoas desenvolvedoras da Universidade Federal Rural de Pernambuco (UFRPE)',
   url: 'https://ufrpe-devs.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -69,7 +70,7 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/ufrpe-devs',
             label: 'GitHub',
@@ -113,6 +114,9 @@ const config = {
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} UFRPE-DEVS`,
+      },
+      colorMode: {
+        defaultMode: 'dark',
       },
       prism: {
         theme: lightCodeTheme,

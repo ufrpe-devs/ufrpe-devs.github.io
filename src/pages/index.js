@@ -8,17 +8,18 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <h1 className="hero__title">{'Boas vindas ao UFRPE Devs'}</h1>
+        <p className="hero__subtitle">
+          {
+            'Nós somos uma comunidade de desenvolvimento open source da Universidade Federal Rural de Pernambuco. Juntos buscamos incentivar e praticar diariamente o compartilhamento de conhecimento e a socialização entre todos os cursos de tecnologia da UFRPE'
+          }
+        </p>
         <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+          <Link className="button button--secondary button--lg" to="/community">
+            Comunidade
           </Link>
         </div>
       </div>
@@ -27,11 +28,12 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`Home | ${siteConfig.title}`}
+      description="Welcome to UFRPE Devs"
+    >
       <HomepageHeader />
       <main>
         <HomepageFeatures />

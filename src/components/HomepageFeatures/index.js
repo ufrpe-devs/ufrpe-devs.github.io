@@ -4,32 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Uma Comunidade',
+    Svg: require('@site/static/img/community.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        {'Seja você veterano ou calouro, participar de uma comunidade é uma oportunidade incrível de conhecer novas pessoas e projetos além de ser um espaço para compartilhar o conhecimento'}
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'UFRPE',
+    Svg: require('@site/static/img/ufrpe.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        {'Uma comunidade criada por estudantes da Universidade Federal Rural de Pernambuco, também conhecida como Ruralinda'}
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Open Source',
+    Svg: require('@site/static/img/open_source.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        {'O desenvolvimento de software nos últimos tempos só se tornou o que é graças à comunidades como a nossa, onde pessoas diferentes se unem para resolver os mais variados problemas'}
       </>
     ),
   },
