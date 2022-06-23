@@ -37,9 +37,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          routeBasePath: '/about',
+          routeBasePath: '/sobre',
         },
         blog: {
           showReadingTime: true,
@@ -69,7 +67,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'About',
+            label: 'Sobre',
           },
           // { to: '/blog', label: 'Blog', position: 'left' },
           {
@@ -86,8 +84,8 @@ const config = {
             title: 'UFRPE-DEVS',
             items: [
               {
-                label: 'About',
-                to: '/about/intro',
+                label: 'Sobre',
+                to: '/sobre/intro',
               },
             ],
           },
