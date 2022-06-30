@@ -15,7 +15,9 @@ A UFRPE Devs é um espaço aberto focado na disseminação do conhecimento acerc
 
 É isso mesmo que você pensou, trata-se de um grupo de pessoas que compartilham algo em comum, um objetivo comum: criar, idealizar, modelar, desenvolver, testar; mas no geral mesmo, desenvolver projetos para a Ruralinda! Somos uma comunidade que, seja você calouro ou veterano, permite aprochegar a novas pessoas de todos os ritmos, stacks e vibes.
 
-Criada por estudantes da Universidade Federal Rural de Pernambuco, nossa missão é manter um ambiente de desenvolvimento de projetos de código aberto, que além de ser um espaço para compartilhar conhecimento e ideias, também seja um ambiente inclusivo, e por isso temos o dever de manter uma comunidade 100% inclusiva para tod@s! Para isso, criamos um [Código de Conduta](https://github.com/ufrpe-devs/.github/blob/main/CODE_OF_CONDUCT.md) que estabelece o nosso comprometimento em tornar a participação em nossa comunidade uma experiência livre de assédio para tod@s!
+Criada por estudantes da Universidade Federal Rural de Pernambuco, nossa missão é manter um ambiente de desenvolvimento de projetos de código aberto, que além de ser um espaço para compartilhar conhecimento e ideias, também seja um ambiente inclusivo, e por isso temos o dever de manter uma comunidade 100% inclusiva para tod@s! Para isso, criamos um [Código de Conduta](https://github.com/ufrpe-devs/.github/blob/main/CODE_OF_CONDUCT.md) que estabelece o nosso comprometimento de tornar a participação em nossa comunidade uma experiência livre de assédio ou agressão para tod@s!
+
+Por fim, está em nosso sangue sermos **Open Source[^1]** de carteirinha, em si, o desenvolvimento de software nos últimos tempos só se tornou o que é hoje graças à comunidades de código aberto, como a nossa, onde pessoas diferentes se unem para resolver os mais variados problemas.
 
 Por fim, está em nosso sangue sermos **Open Source[^1]** de carteirinha, em si, o desenvolvimento de software nos últimos tempos só se tornou o que é hoje graças à comunidades de código aberto como a nossa, onde pessoas diferentes se unem para resolver os mais variados problemas.
 
