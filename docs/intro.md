@@ -27,10 +27,12 @@ Especialmente se você for aluno da Ruralinda, também estamos presentes pela in
 
 E se você está por aqui para fazer contribuições em nossos projetos, pois se aprochegue mais ainda, dá uma olhada na nossa [lista de repositórios](https://github.com/orgs/ufrpe-devs/repositories) e também no nosso [guia de contribuição](https://github.com/ufrpe-devs/comunidade/blob/main/CONTRIBUTING.md), só pra saber daquelas _detalhocas_ que deixam tudo arrumadinho aqui na nossa casa 😉.
 
-## E como eu posso participar?
+## Ah, mas eu não sei muito de programação, posso ajudar mesmo assim? {#newcomers-contributing}
 
-<!-- Há diversas formas de participar de nossa comunidade -->
+Claro que pode, como já temos demonstrado nos tópicos anteriores, somos bastante abertos no que fazemos e queremos proporcionar um ambiente de aprendizado, ~~talvez não seja exatamente o ambiente de aprendizado de sala de aula~~, mas com certeza um ambiente que você poderá praticar e se apoiar em nossa equipe ou até mesmo em outras pessoas que sabem exatamente como se iniciar no mundo do desenvolvimento de software.
 
-É um prazer ter você conosco!
+Por isso, nós queremos encorajar você a fazer parte da comunidade, seja uma pequena contribuição ali ou aqui, pode ter certeza que o aprendizado vai ocorrer de forma natural e quando você for parar pra notar, você já vai estar em outro patamar.
+
+PS: Tá com medo de ficar sozinho? Mas rapaz, se apoia em alguém da nossa equipe! Estamos dispostos a te ajudar nesse teu crescimento pessoal e conjunto.
 
 [^1]: _Open Source_ ou _Open Source Software_ é um **software de código aberto**, ou seja, o código fonte do software é disponibilizado de forma aberta para tod@s sob uma licença que fornece direitos de uso do software.
