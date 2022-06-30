@@ -19,7 +19,13 @@ Criada por estudantes da Universidade Federal Rural de Pernambuco, nossa missão
 
 Por fim, está em nosso sangue sermos **Open Source[^1]** de carteirinha, em si, o desenvolvimento de software nos últimos tempos só se tornou o que é hoje graças à comunidades de código aberto, como a nossa, onde pessoas diferentes se unem para resolver os mais variados problemas.
 
-Por fim, está em nosso sangue sermos **Open Source[^1]** de carteirinha, em si, o desenvolvimento de software nos últimos tempos só se tornou o que é hoje graças à comunidades de código aberto como a nossa, onde pessoas diferentes se unem para resolver os mais variados problemas.
+## E como eu posso participar? {#contributing}
+
+Somos essencialmente alunos da Universidade Federal Rural de Pernambuco, porém estamos abertos para todo o público de estudantes e desenvolvedores. Atualmente estamos presentes com a nossa [Organização no GitHub](https://github.com/ufrpe-devs), e também caso você queira conversar com a gente diretamente, tirar dúvidas, sugestões ou simplesmente discutir um tópico interessante seja de algum projeto ou em geral, estaremos pelo [Discord UFRPE Devs](https://discordapp.com/invite/xeEaKKG).
+
+Especialmente se você for aluno da Ruralinda, também estamos presentes pela instituição, nossa equipe de colaboradores faz parte de todos os cursos do DC e estaremos por aqui para auxiliar você nessa jornada! Selo **VDC** (Vai dar certo)! Criamos um canal especialmente para isso em nosso [Discord/#rural](https://discordapp.com/invite/xeEaKKG).
+
+E se você está por aqui para fazer contribuições em nossos projetos, pois se aprochegue mais ainda, dá uma olhada na nossa [lista de repositórios](https://github.com/orgs/ufrpe-devs/repositories) e também no nosso [guia de contribuição](https://github.com/ufrpe-devs/comunidade/blob/main/CONTRIBUTING.md), só pra saber daquelas _detalhocas_ que deixam tudo arrumadinho aqui na nossa casa 😉.
 
 ## E como eu posso participar?
 
