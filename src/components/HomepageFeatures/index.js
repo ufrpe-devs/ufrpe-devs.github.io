@@ -8,7 +8,9 @@ const FeatureList = [
     Svg: require('@site/static/img/community.svg').default,
     description: (
       <>
-        {'Seja você veterano ou calouro, participar de uma comunidade é uma oportunidade incrível de conhecer novas pessoas e projetos além de ser um espaço para compartilhar o conhecimento'}
+        {
+          'Seja você veterano ou calouro, participar de uma comunidade é uma oportunidade incrível de conhecer novas pessoas e projetos além de ser um espaço para compartilhar o conhecimento'
+        }
       </>
     ),
   },
@@ -17,7 +19,9 @@ const FeatureList = [
     Svg: require('@site/static/img/ufrpe.svg').default,
     description: (
       <>
-        {'Uma comunidade criada por estudantes da Universidade Federal Rural de Pernambuco, também conhecida como Ruralinda'}
+        {
+          'Uma comunidade criada por estudantes da Universidade Federal Rural de Pernambuco, também conhecida como Ruralinda'
+        }
       </>
     ),
   },
@@ -26,13 +30,15 @@ const FeatureList = [
     Svg: require('@site/static/img/open_source.svg').default,
     description: (
       <>
-        {'O desenvolvimento de software nos últimos tempos só se tornou o que é graças à comunidades como a nossa, onde pessoas diferentes se unem para resolver os mais variados problemas'}
+        {
+          'O desenvolvimento de software nos últimos tempos só se tornou o que é graças à comunidades como a nossa, onde pessoas diferentes se unem para resolver os mais variados problemas'
+        }
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">

@@ -17,7 +17,10 @@ function HomepageHeader() {
           }
         </p>
         <div className={styles.buttons}>
-          <Link className="button button--secondary button--lg" to="/sobre/intro">
+          <Link
+            className="button button--secondary button--lg"
+            to="/sobre/intro"
+          >
             {'Conheça mais!'}
           </Link>
         </div>
@@ -28,10 +31,7 @@ function HomepageHeader() {
 
 export default function Home() {
   return (
-    <Layout
-      title="Home"
-      description="Welcome to UFRPE Devs"
-    >
+    <Layout title="Home" description="Welcome to UFRPE Devs">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
