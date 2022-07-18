@@ -61,6 +61,11 @@ const config = {
             position: 'left',
             label: 'Sobre',
           },
+          {
+            to: '/discord',
+            label: 'Discord',
+            position: 'left',
+          },
           // { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/ufrpe-devs',
