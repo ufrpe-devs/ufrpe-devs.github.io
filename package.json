@@ -13,7 +13,8 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "format:check": "prettier \"src/**/*.+(js|jsx|css|md)\" --check",
-    "format:fix": "prettier \"src/**/*.+(js|jsx|css|md)\" --write"
+    "format:fix": "prettier \"src/**/*.+(js|jsx|css|md)\" --write",
+    "release": "release-it --ci"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.21",
@@ -26,7 +27,8 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.0.0-beta.21",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "release-it": "^15.1.2"
   },
   "browserslist": {
     "production": [
