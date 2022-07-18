@@ -45,5 +45,5 @@ jobs:
       - name: Install
         run: npm ci
 
-      - name: Build Docusaurus Theme
+      - name: Build
         run: npm run build
