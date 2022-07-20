@@ -12,6 +12,7 @@ on:
         - patch
         - minor
         - major
+        - --no-increment
 
 jobs:
   bump:
@@ -38,7 +39,7 @@ jobs:
           git config user.email github-actions@github.com
 
       - name: ReleaseIt
-        run: npm run release
+        run: npm run release -- ${{ inputs.bump_type }}
       
   release:
     name: Publish
