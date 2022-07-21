@@ -35,8 +35,8 @@ jobs:
 
       - name: Config Git
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name ufrpe-devs
+          git config ufrpedevs@gmail.com
 
       - name: ReleaseIt
         run: npm run release -- ${{inputs.bump_type}}
