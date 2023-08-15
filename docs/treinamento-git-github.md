@@ -11,9 +11,9 @@ O treinamento será dividido em três dias com cada aula com expectativa de dura
 
 | Dias | Assunto | Data | Horário|
 |:----:|:-------:|:----:|:------:|
-| Dia 1|Introdução ao Gerenciamento de Versão |xx/08/23|18:30 às 19:30|
-| Dia 2|Git: Fundamentos e Aplicações Práticas|xx/08/23|18:30 às 19:30|
-| Dia 3|GitHub: Aplicação e Gerenciamento     |xx/08/23|18:30 às 19:30|
+| Dia 1|Introdução ao Gerenciamento de Versão |21/08/23|18:30 às 19:30|
+| Dia 2|Git: Fundamentos e Aplicações Práticas|23/08/23|18:30 às 19:30|
+| Dia 3|GitHub: Aplicação e Gerenciamento     |25/08/23|18:30 às 19:30|
 
 Iremos disponibilizar apostila, classroom, material e computadores; todavia, sinta-se a vontade de trazer o seu computador.
 
@@ -24,3 +24,9 @@ Inscrições abertas com vagas limitadas.
 O Treinamento será realizado no CEAGRI-I, 1º andar, laboratório 10.
 
 <https://goo.gl/maps/3UWdVm3kK931rpCR8>
+
+## Contato com Organizadores
+
+- Daniel Fernandes <gilvaney.leandro@ufrpe.br>
+- Gabriel Santos <gabriel.santossilva@ufrpe.br>
+- Steffano Pereira <steffano.pereira@ufrpe.br>
