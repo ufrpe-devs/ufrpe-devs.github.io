@@ -19,6 +19,10 @@ Iremos disponibilizar apostila, classroom, material e computadores; todavia, sin
 
 Inscrições abertas com vagas limitadas.
 
+## Inscrições
+
+Inscreva-se no link a seguir: https://forms.gle/Z5QR1Cq7swZLwhQv6
+
 ## Localização
 
 O Treinamento será realizado no CEAGRI-I, 1º andar, laboratório 10.
